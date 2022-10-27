@@ -18,6 +18,7 @@ body {
   height: 100vh;
   background-color: #dfe6e9;
 }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -82,10 +83,9 @@ button {
   display: inline-flex;
   align-items: center;
   padding: 8px 14px;
-  border-radius: 14px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #f0932b;
+  background-color: #34495e;
   color: white;
   border: none;
 }
@@ -147,9 +147,3 @@ app-top-bar h1 {
   border-radius: 2px;
   background-color: #eeeeee;
 }
-
-/*
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at https://angular.io/license
-  */
