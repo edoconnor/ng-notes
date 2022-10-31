@@ -4,24 +4,17 @@ import { State } from '../state';
 import { StateService } from '../state.service';
 
 @Component({
-  selector: 'app-states-list',
-  templateUrl: './states-list.component.html',
-  styleUrls: ['./states-list.component.css']
+  selector: 'app-state-list',
+  templateUrl: './state-list.component.html',
+  styleUrls: ['./state-list.component.css'],
 })
-
-export class StatesListComponent implements OnInit {
+export class StateListComponent implements OnInit {
   states$: Observable<State[]> = new Observable();
 
   constructor(private statesService: StateService) {}
 
   ngOnInit(): void {
     this.fetchStates();
-  }
-
-  deleteState(id: string): void {
-    this.statesService.deleteState(id).subscribe({
-      next: () => this.fetchStates(),
-    });
   }
 
   private fetchStates(): void {

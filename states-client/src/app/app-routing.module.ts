@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StatesListComponent } from './states-list/states-list.component';
-import { StateDetailComponent } from './state-detail/state-detail.component';
+import { StateListComponent } from './state-list/state-list.component';
+import { StateDetailsComponent } from './state-details/state-details.component';
  
 
 const routes: Routes = [
   {path: '', redirectTo: 'states', pathMatch: 'full' },
-  {path: 'states', component: StatesListComponent },
-  {path: 'states/:id', component: StateDetailComponent },
-   
+  {path: 'states', component: StateListComponent },
+  {path: 'states/:id', component: StateDetailsComponent },
 ];
 
 @NgModule({
