@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="title">Brewery List</h1>
+
+  <ul class="list-group">
+    <li *ngFor="let post of posts" class="list-group-item">
+      <span class="bold"> {{ post.name }}</span>
+      {{ post.street }}, {{ post.city }},
+      {{ post.state }}
+      {{ post.postal_code }}
+      <br />
+    </li>
+  </ul>
+</div>

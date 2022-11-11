@@ -1,0 +1,11 @@
+.container {
+  padding-left: 1rem;
+}
+.title {
+  margin-left: 2.5rem;
+  text-decoration: underline;
+}
+
+.bold {
+  color: red;
+}
