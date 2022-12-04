@@ -1,0 +1,11 @@
+.container {
+  max-width: 50vw;
+  display: flex;
+  justify-content: center;
+  border-style: dotted;
+  border-color: #30336b;
+  background-color: #dff9fb;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
