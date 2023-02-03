@@ -1,0 +1,58 @@
+<div class="container mt-5">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">username</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="username"
+        [class.invalid]="
+          registerForm.get('username')?.invalid &&
+          (registerForm.get('username')?.dirty ||
+            registerForm.get('username')?.touched ||
+            isSubmitted)
+        "
+      />
+      <span
+        *ngIf="
+          registerForm.get('username')?.hasError('required') &&
+          (registerForm.get('username')?.dirty ||
+            registerForm.get('username')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+        >Username is required.</span
+      >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">email</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="email"
+        [class.invalid]="
+          registerForm.get('email')?.invalid &&
+          (registerForm.get('email')?.dirty ||
+            registerForm.get('email')?.touched ||
+            isSubmitted)
+        "
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">password</label>
+      <input
+        type="password"
+        class="form-control"
+        formControlName="password"
+        [class.invalid]="
+          registerForm.get('password')?.invalid &&
+          (registerForm.get('password')?.dirty ||
+            registerForm.get('password')?.touched ||
+            isSubmitted)
+        "
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
+<router-outlet></router-outlet>
