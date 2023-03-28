@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ng-blog-x": {
+      "hosting": {
+        "client": [
+          "ng-blog-x"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ng-blog-x"
+  }
+}
