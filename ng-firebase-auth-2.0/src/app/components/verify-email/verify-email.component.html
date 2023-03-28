@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="verify-container">
+      <div class="authBlock">
+        <h3 class="page-title">Thank You for Registering!</h3>
+        <div class="formGroup" *ngIf="authService.userData as user">
+          <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
+          <p class="text-center">Please check your email and click on the link to verfiy your email address.</p>
+        </div>
+        
+        <!-- Calling SendVerificationMail() method using authService Api -->
+        <div class="formGroup text-center">
+            <button type="button" class="btn btn-outline-primary"
+              (click)="authService.SendVerificationMail(); isSent = true;"
+              [disabled]="isSent">
+              {{ isSent ? 'Sent! Check Your Email' : 'Resend Verification Email' }}
+            </button>
+          </div>
+      </div>
+      <div class="redirect text-center mt-3">
+        <button type="button" class="btn btn-outline-primary"  [routerLink]="['/sign-in']">Sign In</button>
+      </div>
+    </div>
+  </div>
